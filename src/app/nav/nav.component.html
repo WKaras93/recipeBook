@@ -1,0 +1,46 @@
+<div class="nav-container">
+    <div class="logo-container" routerLink="">
+        <span class="material-icons">outdoor_grill</span>
+        <div class="title">recipebook</div>
+    </div>
+
+    <ng-container *ngIf="!isMobile; else mobileMenu">
+        <div class="search-container">
+            <div class="input-container">
+                <input
+                    type="text"
+                    class="input-search"
+                    name="search"
+                    placeholder="search"
+                    [(ngModel)]="searchPhrase"
+                />
+            </div>
+    
+            <div (click)="search()">
+                <span class="material-icons">search</span>
+            </div>
+        </div>
+    
+        <div class="login-container" routerLink="/user">
+            <span class="material-icons">account_circle</span>
+            <div class="title">login</div>
+        </div>
+    </ng-container>
+
+    <ng-template #mobileMenu>
+        <button mat-icon-button [matMenuTriggerFor]="menu" id="mobile-menu">
+            <span class="material-icons">menu</span>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <span class="material-icons">search</span>
+                <span>Search</span>
+            </button>
+
+            <button mat-menu-item>
+                <span class="material-icons">account_circle</span>
+                <span>Login</span>
+            </button>
+        </mat-menu>
+    </ng-template>
+</div>

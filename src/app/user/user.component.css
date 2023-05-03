@@ -1,0 +1,43 @@
+.user-container {
+    width: 30rem;
+    min-height: 20rem;
+    background-color: #c9cdd4;
+    padding: 2rem;
+}
+
+.login-container {
+    width: 100%;
+}
+
+.register-container {
+    width: 100%;
+    min-height: 32rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.on-submit {
+    height: 2.5rem;
+    background-color: #0655cf;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem ;
+}
+
+.on-change-view {
+    border: none;
+    background-color: transparent;
+    color: #0655cf;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.invalid {
+    border-color: #eb0505;
+}

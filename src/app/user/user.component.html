@@ -1,0 +1,109 @@
+<div class="user-container">
+    <ng-container *ngIf="displayLoginView; else registerView">
+        <div class="login-container">
+            <div class="title">Login</div>
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                <div class="form-group">
+                    <label for="firstName">Email</label>
+                    <input
+                        type="email"
+                        formControlName="email"
+                        class="form-input"
+                        (focus)="onFocus()"
+                        [ngClass]="{'invalid': submitted && loginF['email'].errors}"
+                    />
+                    <div *ngIf="submitted && loginF['email'].errors" class="invalid-wrapper">
+                        <div *ngIf="loginF['email'].errors['required']">Email is required</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        formControlName="password"
+                        class="form-input"
+                        (focus)="onFocus()"
+                        [ngClass]="{'invalid': submitted && loginF['password'].errors}"
+                    />
+                    <div *ngIf="submitted && loginF['password'].errors" class="invalid-wrapper">
+                        <div *ngIf="loginF['password'].errors['required']">Password is required</div>
+                    </div>
+                </div>
+
+                <div class="form-group-button">
+                    <button class="on-submit">Login</button>
+                    <button class="on-change-view" (click)="changeView()">Register</button>
+                </div>
+            </form>
+        </div>
+    </ng-container>
+    
+    <ng-template #registerView>
+        <div class="register-container">
+            <div class="title">Register</div>
+            <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input
+                        type="text"
+                        formControlName="firstName"
+                        class="form-input"
+                        (focus)="onFocus()"
+                        [ngClass]="{'invalid': submitted && registerF['firstName'].errors}"
+                    />
+                    <div *ngIf="submitted && registerF['firstName'].errors" class="invalid-wrapper">
+                        <div *ngIf="registerF['firstName'].errors['required']">Email is required</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input
+                        type="text"
+                        formControlName="lastName"
+                        class="form-input"
+                        (focus)="onFocus()"
+                        [ngClass]="{'invalid': submitted && registerF['lastName'].errors}"
+                    />
+                    <div *ngIf="submitted && registerF['lastName'].errors" class="invalid-wrapper">
+                        <div *ngIf="registerF['lastName'].errors['required']">Email is required</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        formControlName="email"
+                        class="form-input"
+                        (focus)="onFocus()"
+                        [ngClass]="{'invalid': submitted && registerF['email'].errors}"
+                    />
+                    <div *ngIf="submitted && registerF['email'].errors" class="invalid-wrapper">
+                        <div *ngIf="registerF['email'].errors['required']">Email is required</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        formControlName="password"
+                        class="form-input"
+                        (focus)="onFocus()"
+                        [ngClass]="{'invalid': submitted && registerF['password'].errors}"
+                    />
+                    <div *ngIf="submitted && registerF['password'].errors" class="invalid-wrapper">
+                        <div *ngIf="registerF['password'].errors['required']">Password is required</div>
+                    </div>
+                </div>
+
+                <div class="form-group-button">
+                    <button class="on-submit">Register</button>
+                    <button class="on-change-view" (click)="changeView()">Login</button>
+                </div>
+            </form>
+        </div>
+    </ng-template>
+</div>

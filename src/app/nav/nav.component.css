@@ -1,0 +1,49 @@
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+}
+
+.logo-container, .search-container, .login-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-container {
+    align-items: center;
+}
+
+.search-container .material-icons {
+    display: flex;
+}
+
+.search-container .input-container {
+    color: #000;
+}
+
+.title {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.logo-container:hover, .search-container:hover, .login-container:hover{
+    cursor: pointer;
+    color: #ffcc00;
+}
+
+.mat-mdc-menu-item {
+    min-height: 30px;
+    min-width: 150px;
+}
+
+#mobile-menu {
+    border: none;
+    background: transparent;
+    color: #fff;
+}
