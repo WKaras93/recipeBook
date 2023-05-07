@@ -9,14 +9,17 @@ import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { UserComponent } from './user/user.component';
 import { MatMenuModule } from '@angular/material/menu';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselComponent } from './carousel/carousel.component'
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavComponent,
-    UserComponent
+    UserComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatMenuModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
