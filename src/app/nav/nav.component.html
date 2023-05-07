@@ -31,16 +31,35 @@
         <button mat-icon-button [matMenuTriggerFor]="menu" id="mobile-menu">
             <span class="material-icons">menu</span>
         </button>
+
         <mat-menu #menu="matMenu">
-            <button mat-menu-item>
+            <button mat-menu-item (click)="onMobileSearch()">
                 <span class="material-icons">search</span>
                 <span>Search</span>
             </button>
 
-            <button mat-menu-item>
+            <button mat-menu-item routerLink="/user">
                 <span class="material-icons">account_circle</span>
                 <span>Login</span>
             </button>
         </mat-menu>
     </ng-template>
+</div>
+
+<div class="mobile-search-input" *ngIf="shouldDisplayInput">
+    <div class="search-container">
+        <div class="input-container">
+            <input
+                type="text"
+                class="input-search"
+                name="search"
+                placeholder="search"
+                [(ngModel)]="searchPhrase"
+            />
+        </div>
+
+        <div (click)="search()">
+            <span class="material-icons">search</span>
+        </div>
+    </div>
 </div>

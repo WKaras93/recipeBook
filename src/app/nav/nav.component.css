@@ -32,7 +32,7 @@
     margin-bottom: auto;
 }
 
-.logo-container:hover, .search-container:hover, .login-container:hover{
+.logo-container:hover, .search-container:hover, .login-container:hover {
     cursor: pointer;
     color: #ffcc00;
 }
@@ -40,6 +40,17 @@
 .mat-mdc-menu-item {
     min-height: 30px;
     min-width: 150px;
+}
+
+.mobile-search-input {
+    display: flex;
+    justify-content: center;
+    top: 0;
+    position: sticky;
+    height: 30px;
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #fff;
 }
 
 #mobile-menu {
